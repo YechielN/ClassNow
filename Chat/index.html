@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Maharsha Grade 9 Boys Chat!</title>
+  <link rel="shortcut icon" href="assets/images/maharsha_logo.png" type="image/x-icon">
+</head>
+
+<div class="item item1">
+  Click here to go back to the <a href="https://yechieln.github.io" target="_blank" class="item1">Timetable</a><br>
+Enter Chat and press enter
+</div>
+<style>
+  .item1 {
+    color: black;
+    justify-items: start;
+    align-content: center;
+    align-items: center;
+    align-self: start;
+    justify-content: start;
+    align-self: center;
+  }
+</style>
+<div><input id=input placeholder="message" /></div>
+<div class="item item1" id=box></div>
+<script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.28.2.min.js></script>
+<script> (function() {
+        var pubnub = new PubNub({
+            publishKey: 'demo',
+            subscribeKey: 'demo'
+        });
+        function $(id) {
+            return document.getElementById(id);
+        }
+        var box = $('box'),
+            input = $('input'),
+            channel = '10chat-demo';
+        pubnub.addListener({
+            message: function(obj) {
+                box.innerHTML = ('' + obj.message).replace(/[<>]/g, '') + '<br>' + box.innerHTML
+            }
+        });
+        pubnub.subscribe({
+            channels: [channel]
+        });
+        input.addEventListener('keyup', function(e) {
+            if ((e.keyCode || e.charCode) === 13) {
+                pubnub.publish({
+                    channel: channel,
+                    message: input.value,
+                    x: (input.value = '')
+                });
+            }
+        });
+    })();
+</script>
+
+<script>
+  // Send a message
+pubnub.publish({ channel : 'chat', message : "hello!" })
+Copy
+
+pubnub.addListener({
+    message: function(msg) { console.log("got a message",msg.message); }
+});
+pubnub.subscribe({channels:['chat']});
+</script>
