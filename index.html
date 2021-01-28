@@ -205,102 +205,102 @@ $(document).ready(function() {
     hour > 9 && hour < 16
   ) { */
 
-  if (day >= 0 && day <= 5 && hour >= 8 + minute >= 30 && hour <= 10 + minute <=59 ) {
+  if (day == 0 && day == 1 && day == 2 && day == 3 && day == 4 && day == 5 && (hour >= 8 && minute >= 30) && (hour <= 10 && minute <=59) ) {
     $("#RDS").show();
   } else {
     $("#RDS").hide();
   }
-  if (day >= 1 && day <= 3 && hour >= 11 + minute >= 00 && hour <= 11 + minute <=44 ) {
+  if (day == 1 && day == 2 && day == 3 && (hour >= 11 && minute >= 00) && (hour <= 11 && minute <=44) ) {
     $("#RPK").show();
   } else {
     $("#RPK").hide();
   }
-  if (day >= 1 + hour >=11 + minute >= 45 && day <= 1 + hour <= 12 + minute <= 29) {
+  if (day == 1 && (hour >=11 + minute >= 45) && (hour <= 12 && minute <= 29)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day >= 2 + hour >=12 + minute >= 30 && day <= 2 + hour <= 13 + minute <= 09) {
+  if (day == 2 && (hour >=12 && minute >= 30) && (hour <= 13 && minute <= 09)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day >= 3 + hour >=15 + minute >= 00 && day <= 3 + hour <= 16 + minute <= 29) {
+  if (day == 3 && (hour >=15 && minute >= 00) && (hour <= 16 && minute <= 29)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day >= 4 + hour >=13 + minute >= 40 && day <= 4 + hour <= 14 + minute <= 14) {
+  if (day == 4 && (hour >=13 && minute >= 40) && (hour <= 14 && minute <= 14)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day >= 1 + hour >= 12 + minute >=30 && day <= 1 + hour <= 14 + minute <= 14) {
+  if (day == 1 && (hour >= 12 && minute >=30) && (hour <= 14 && minute <= 14)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day >= 2 + hour >= 13 + minute >=40 && day <= 2 + hour <= 14 + minute <= 14) {
+  if (day == 2 (hour >= 13 && minute >=40) && (hour <= 14 && minute <= 14)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day >= 3 + hour >= 11 + minute >=45 && day <= 3 + hour <= 12 + minute <= 29) {
+  if (day == 3 && (hour >= 11 && minute >=45) && (hour <= 12 && minute <= 29)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day >= 4 + hour >= 14 + minute >= 15 && day <= 4 + hour <= 14 + minute <= 59) {
+  if (day == 4 && (hour >= 14 && minute >= 15) && (hour <= 14 && minute <= 59)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day >= 1 && day <= 2 && hour >= 14 && minute >= 15 && hour <=14 + minute <= 59) {
+  if (day == 1 && day == 2 && (hour >= 14 && minute >= 15) && (hour <=14 && minute <= 59)) {
     $("#Math").show();
   } else {
     $("#Math").hide();
   }
-  if (day >= 3 && day <= 5 && hour >= 12 && minute >= 30 && hour <=13 + minute <= 09) {
+  if (day == 3 && day == 4 && day == 5 && (hour >= 12 && minute >= 30) && (hour <=13 && minute <= 09)) {
     $("#Math").show();
   } else {
     $("#Math").hide();
   }
-  if (day >= 1 + hour >= 15 + minute >= 00 && day <= 1 + hour <= 15 + minute <= 44) {
+  if (day == 1 && (hour >= 15 && minute >= 00) && (hour <= 15 && minute <= 44)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day >= 3 + hour >= 13 + minute >= 40 && day <= 3 + hour <= 14 + minute <= 14) {
+  if (day == 3 && (hour >= 13 && minute >= 40) && (hour <= 14 && minute <= 14)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day >= 4 + hour >= 15 + minute >= 00 && day <= 4 + hour <= 15 + minute <= 44) {
+  if (day == 4 && (hour >= 15 && minute >= 00) && (hour <= 15 && minute <= 44)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day >= 5 + hour >= 13 + minute >= 40 && day <= 5 + hour <= 14 + minute <= 14) {
+  if (day == 5 && (hour >= 13 && minute >= 40) && (hour <= 14 && minute <= 14)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day >= 1 + hour >= 15 + minute >= 45 && day <= 1 + hour <= 16 + minute <= 29) {
+  if (day == 1 && (hour >= 15 && minute >= 45) && (hour <= 16 && minute <= 29)) {
     $("#English").show();
   } else {
     $("#English").hide();
   }
-  if (day >= 2 + hour >= 15 + minute >= 00 && day <= 2 + hour <= 15 + minute <= 44) {
+  if (day == 2 && (hour >= 15 && minute >= 00) && (hour <= 15 && minute <= 44)) {
     $("#English").show();
   } else {
     $("#English").hide();
   }
-  if (day >= 3 + hour >= 14 + minute >= 15 && day <= 3 + hour <= 14 + minute <= 59) {
+  if (day == 3 && (hour >= 14 && minute >= 15) && (hour <= 14 && minute <= 59)) {
     $("#English").show();
   } else {
     $("#English").hide();
   }
-  if (day >= 4 + hour >= 11 + minute >= 00 && day <= 4 + hour <= 11 + minute <= 44) {
+  if (day == 4 && (hour >= 11 && minute >= 00) && (hour <= 11 && minute <= 44)) {
     $("#English").show();
   } else {
     $("#English").hide();
@@ -315,37 +315,37 @@ $(document).ready(function() {
   } else {
     $("#CAT").hide();
   }
-  if (day >= 2 + hour >= 15 + minute >= 45 && day <= 2 + hour <= 16 + minute <= 29) {
+  if (day == 2 && (hour >= 15 && minute >= 45) && (hour <= 16 && minute <= 29)) {
     $("#BE").show();
   } else {
     $("#BE").hide();
   }
-  if (day >= 4 + hour >= 15 + minute >= 45 && day <= 4 + hour <= 16 + minute <= 29) {
+  if (day == 4 && (hour >= 15 && minute >= 45) && (hour <= 16 && minute <= 29)) {
     $("#BE").show();
   } else {
     $("#BE").hide();
   }
-  if (day >= 4 + hour >= 11 + minute >= 45 && day <= 4 + hour <= 12 + minute <= 29) {
+  if (day == 4 && (hour >= 11 && minute >= 45) && (hour <= 12 && minute <= 29)) {
     $("#LO").show();
   } else {
     $("#LO").hide();
   }
-  if (day >= 1 && day <= 4 && hour >=00 && hour <= 8 + minute <=29 && hour >= 16 + minute >= 30) {
+  if (day == 1 && day == 2 && day == 3 && day == 4 && (hour >=00) && (hour <= 8 && minute <=29) && (hour >= 16 && minute >= 30)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
   }
-  if (day >= 0 && hour >=00 && day <= 0 && hour <= 8 + minute <= 29 && hour >= 11) {
+  if (day == 0 && (hour >=00) && (hour <= 8 && minute <= 29) && (hour >= 11)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
   }
-  if (day >= 5 && hour >=00 && day <= 5 && hour <= 8 + minute <= 29 && hour >= 14 + minute >= 15) {
+  if (day == 5 && (hour >=00) && (hour <= 8 && minute <= 29) && (hour >= 14 && minute >= 15)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
   }
-  if (day >= 6 && day <= 6 && hour >= 00 && hour <= 23) {
+  if (day == 6 (hour >= 00) && (hour <= 23)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
