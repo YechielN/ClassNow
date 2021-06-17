@@ -358,6 +358,17 @@ $(document).ready(function() {
 });
 
   </script>
+
+  <script>
+    function myFunction() {
+  var I2 = document.querySelector(".item2");
+  if (window.getComputedStyle(I2).display === "none") {
+    // Do something...
+    I2 = "blank"
+  }
+    document.querySelector(".item2").innerHTML = I2;
+}
+  </script>
   <!--<script>
     if($(".item2").visibility = hidden) {
       $("#NO").show();
