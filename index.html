@@ -199,8 +199,8 @@
 $(document).ready(function() {
   var rightNow = new Date();
   var day = rightNow.getUTCDay();
-  var hour = rightNow.getHours();
-  var minute = rightNow.getMinutes();
+  var hourTime = rightNow.getHours();
+  var minuteTime = rightNow.getMinutes();
 
   // show div only on day and time, Monday to Friday; hide div on weekend
   // Sunday = 0, Monday = 1, and so on ..., Saturday = 6
@@ -210,147 +210,147 @@ $(document).ready(function() {
     hour > 9 && hour < 16
   ) { */
 
-  if (day == 0 && day == 1 && day == 2 && day == 3 && day == 4 && day == 5 && (hour >= 8 && minute >= 30) && (hour <= 10 && minute <=59) ) {
+  if (day == 0 && day == 1 && day == 2 && day == 3 && day == 4 && day == 5 && (hourTime >= 8 && minuteTime >= 30) && (hourTime <= 10 && minuteTime <=59) ) {
     $("#RDS").show();
   } else {
     $("#RDS").hide();
   }
-  if (day == 1 && day == 2 && day == 3 && (hour >= 11 && minute >= 00) && (hour <= 11 && minute <=44) ) {
+  if (day == 1 && day == 2 && day == 3 && (hourTime >= 11 && minuteTime >= 00) && (hourTime <= 11 && minuteTime <=44) ) {
     $("#RPK").show();
   } else {
     $("#RPK").hide();
   }
-  if (day == 1 && (hour >=11 + minute >= 45) && (hour <= 12 && minute <= 29)) {
+  if (day == 1 && (hourTime >=11 + minuteTime >= 45) && (hourTime <= 12 && minuteTime <= 29)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day == 2 && (hour >=12 && minute >= 30) && (hour <= 13 && minute <= 09)) {
+  if (day == 2 && (hourTime >=12 && minuteTime >= 30) && (hourTime <= 13 && minuteTime <= 09)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day == 3 && (hour >=15 && minute >= 00) && (hour <= 16 && minute <= 29)) {
+  if (day == 3 && (hourTime >=15 && minuteTime >= 00) && (hourTime <= 16 && minuteTime <= 29)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day == 4 && (hour >=13 && minute >= 40) && (hour <= 14 && minute <= 14)) {
+  if (day == 4 && (hourTime >=13 && minuteTime >= 40) && (hourTime <= 14 && minuteTime <= 14)) {
     $("#S").show();
   } else {
     $("#S").hide();
   }
-  if (day == 1 && (hour >= 12 && minute >=30) && (hour <= 14 && minute <= 14)) {
+  if (day == 1 && (hourTime >= 12 && minuteTime >=30) && (hourTime <= 14 && minuteTime <= 14)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day == 2 (hour >= 13 && minute >=40) && (hour <= 14 && minute <= 14)) {
+  if (day == 2 (hourTime >= 13 && minuteTime >=40) && (hourTime <= 14 && minuteTime <= 14)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day == 3 && (hour >= 11 && minute >=45) && (hour <= 12 && minute <= 29)) {
+  if (day == 3 && (hourTime >= 11 && minuteTime >=45) && (hourTime <= 12 && minuteTime <= 29)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day == 4 && (hour >= 14 && minute >= 15) && (hour <= 14 && minute <= 59)) {
+  if (day == 4 && (hourTime >= 14 && minuteTime >= 15) && (hourTime <= 14 && minuteTime <= 59)) {
     $("#LS").show();
   } else {
     $("#LS").hide();
   }
-  if (day == 1 && day == 2 && (hour >= 14 && minute >= 15) && (hour <=14 && minute <= 59)) {
+  if (day == 1 && day == 2 && (hourTime >= 14 && minuteTime >= 15) && (hourTime <=14 && minuteTime <= 59)) {
     $("#Math").show();
   } else {
     $("#Math").hide();
   }
-  if (day == 3 && day == 4 && day == 5 && (hour >= 12 && minute >= 30) && (hour <=13 && minute <= 09)) {
+  if (day == 3 && day == 4 && day == 5 && (hourTime >= 12 && minuteTime >= 30) && (hourTime <=13 && minuteTime <= 09)) {
     $("#Math").show();
   } else {
     $("#Math").hide();
   }
-  if (day == 1 && (hour >= 15 && minute >= 00) && (hour <= 15 && minute <= 44)) {
+  if (day == 1 && (hourTime >= 15 && minuteTime >= 00) && (hourTime <= 15 && minuteTime <= 44)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day == 3 && (hour >= 13 && minute >= 40) && (hour <= 14 && minute <= 14)) {
+  if (day == 3 && (hourTime >= 13 && minuteTime >= 40) && (hourTime <= 14 && minuteTime <= 14)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day == 4 && (hour >= 15 && minute >= 00) && (hour <= 15 && minute <= 44)) {
+  if (day == 4 && (hourTime >= 15 && minuteTime >= 00) && (hourTime <= 15 && minuteTime <= 44)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day == 5 && (hour >= 13 && minute >= 40) && (hour <= 14 && minute <= 14)) {
+  if (day == 5 && (hourTime >= 13 && minuteTime >= 40) && (hourTime <= 14 && minuteTime <= 14)) {
     $("#Afrikaans").show();
   } else {
     $("#Afrikaans").hide();
   }
-  if (day == 1 && (hour >= 15 && minute >= 45) && (hour <= 16 && minute <= 29)) {
+  if (day == 1 && (hourTime >= 15 && minuteTime >= 45) && (hourTime <= 16 && minuteTime <= 29)) {
     $("#English").show();
   } else {
     $("#English").hide();
   }
-  if (day == 2 && (hour >= 15 && minute >= 00) && (hour <= 15 && minute <= 44)) {
+  if (day == 2 && (hourTime >= 15 && minuteTime >= 00) && (hourTime <= 15 && minuteTime <= 44)) {
     $("#English").show();
   } else {
     $("#English").hide();
   }
-  if (day == 3 && (hour >= 14 && minute >= 15) && (hour <= 14 && minute <= 59)) {
+  if (day == 3 && (hourTime >= 14 && minuteTime >= 15) && (hourTime <= 14 && minuteTime <= 59)) {
     $("#English").show();
   } else {
     $("#English").hide();
   }
-  if (day == 4 && (hour >= 11 && minute >= 00) && (hour <= 11 && minute <= 44)) {
+  if (day == 4 && (hourTime >= 11 && minuteTime >= 00) && (hourTime <= 11 && minuteTime <= 44)) {
     $("#English").show();
   } else {
     $("#English").hide();
   }
-  if ((day == 2 && hour >= 11 && minute >= 45) && (day == 2 && hour <= 12 && minute <= 29)) {
+  if ((day == 2 && hourTime >= 11 && minuteTime >= 45) && (day == 2 && hourTime <= 12 && minuteTime <= 29)) {
     $("#CAT").show();
   } else {
     $("#CAT").hide();
   }
-  if ((day == 5 && hour >= 11 && minute >= 00) && (day == 5 && hour <= 12 && minute <= 29)) {
+  if ((day == 5 && hourTime >= 11 && minuteTime >= 00) && (day == 5 && hourTime <= 12 && minuteTime <= 29)) {
     $("#CAT").show();
   } else {
     $("#CAT").hide();
   }
-  if (day == 2 && (hour >= 15 && minute >= 45) && (hour <= 16 && minute <= 29)) {
+  if (day == 2 && (hourTime >= 15 && minuteTime >= 45) && (hourTime <= 16 && minuteTime <= 29)) {
     $("#BE").show();
   } else {
     $("#BE").hide();
   }
-  if (day == 4 && (hour >= 15 && minute >= 45) && (hour <= 16 && minute <= 29)) {
+  if (day == 4 && (hourTime >= 15 && minuteTime >= 45) && (hourTime <= 16 && minuteTime <= 29)) {
     $("#BE").show();
   } else {
     $("#BE").hide();
   }
-  if (day == 4 && (hour >= 11 && minute >= 45) && (hour <= 12 && minute <= 29)) {
+  if (day == 4 && (hourTime >= 11 && minuteTime >= 45) && (hourTime <= 12 && minuteTime <= 29)) {
     $("#LO").show();
   } else {
     $("#LO").hide();
   }
-  if (day == 1 && day == 2 && day == 3 && day == 4 && (hour >=00) && (hour <= 8 && minute <=29) && (hour >= 16 && minute >= 30)) {
+  if (day == 1 && day == 2 && day == 3 && day == 4 && (hourTime >=00) && (hourTime <= 8 && minuteTime <=29) && (hourTime >= 16 && minuteTime >= 30)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
   }
-  if (day == 0 && (hour >=00) && (hour <= 8 && minute <= 29) && (hour >= 11)) {
+  if (day == 0 && (hourTime >=00) && (hourTime <= 8 && minuteTime <= 29) && (hourTime >= 11)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
   }
-  if (day == 5 && (hour >=00) && (hour <= 8 && minute <= 29) && (hour >= 14 && minute >= 15)) {
+  if (day == 5 && (hourTime >=00) && (hourTime <= 8 && minuteTime <= 29) && (hourTime >= 14 && minuteTime >= 15)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
   }
-  if (day == 6 (hour >= 00) && (hour <= 23)) {
+  if (day == 6 (hourTime >= 00) && (hourTime <= 23)) {
     $("#NO").show();
   } else {
     $("#NO").hide();
