@@ -2,18 +2,29 @@
 
 <head>
   <meta charset="UTF-8">
-  <script type="text/javascript">    
-    
+  <script type="text/javascript">
     setInterval(function() {
                   window.location.reload();
                 }, 60000); 
 </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="Style.css">
   <title>Maharsha Grade 10 Boys Timetable!</title>
   <link rel="shortcut icon" href="assets/images/maharsha_logo.png" type="image/x-icon" />
  
 </head>
+
+
+
+<center><div class="clock 101">
+  
+  <canvas id="canvas" width="200" height="200"
+  style="background-color:#333">
+  <script src="Clock.js"></script>
+  </canvas>
+  </div>
+  </center>
 
 <body>
   <center>
@@ -33,363 +44,14 @@
   </div>
   </center>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-    // NOTE: Not testet of correct working!
-  function addZero(i) {
-  if (i < 10) {
-    i = "0" + i;
-  }
-  return i;
-  }
-$(document).ready(function() {
-  var rightNow = new Date();
-  var day = rightNow.getUTCDay();
-  var hour = addZero(rightNow.getHours());
-  var minute =addZero(rightNow.getMinutes());
-  var time = hour +":"+minute;
+  <script src="Lesson.js">
 
-  // show div only on day and time, Monday to Friday; hide div on weekend
-  // Sunday = 0, Monday = 1, and so on ..., Saturday = 6
-
-  /* if (
-    (day === 1 || day === 2 || day === 3 || day === 4 || day === 5) &&
-    hour > 9 && hour < 16
-  ) { */
-
-  if((day >= 0 && day <= 5) && (time < ("08:55") || time > ("10:40"))){
-      $("#RDS").hide();
-     }else{
-    $("#RDS").show();
-  }
-
-  if(day >= 0 && day <= 3 && (time > ("10:55") && time < ("11:40"))){
-      $("#RPK").show();
-     }else{
-    $("#RPK").hide();
-  }
-
-  if(day == 1 && time > ("11:40") && time < ("12:25")){
-      $("#S").show();
-     }else if(day == 2 && time > ("14:55") && time < ("15:40")){
-      $("#S").show();
-     }else if(day == 3 && time > ("14:55") && time < ("16:30")){
-      $("#S").show();
-     }else if(day == 4 && time > ("13:35") && time < ("14:10")){
-      $("#S").show();
-     }else{
-    $("#S").hide();
-  }
-  
-  if(day == 1 && time > ("12:25") && time < ("14:10")){
-      $("#LS").show();
-     }else if(day == 2 && time > ("13:25") && time < ("14:10")){
-      $("#LS").show();
-     }else if(day == 3 && time > ("14:10") && time < ("14:55")){
-      $("#LS").show();
-     }else if(day == 4 && time > ("14:10") && time < ("14:55")){
-      $("#LS").show();
-     }else{
-    $("#LS").hide();
-  }
-
-  if(day == 1 && time > ("14:55") && time < ("15:40")){
-      $("#Math").show();
-     }else if(day == 2 && time > ("14:10") && time < ("14:55")){
-      $("#Math").show();
-    }else if(day == 3 || day == 4 || day == 5 && time > ("12:25") && time < ("13:10")){
-      $("#Math").show();
-     }else{
-    $("#Math").hide();
-  }
-
-  if(day == 1 && time > ("14:10") && time < ("14:55")){
-      $("#Afrikaans").show();
-     }else if(day == 3 || day == 5 && time > ("13:35") && time < ("14:10")){
-      $("#Afrikaans").show();
-     }else if(day == 4 && time > ("14:55") && time < ("15:40")){
-      $("#Afrikaans").show();
-     }else{
-    $("#Afrikaans").hide();
-  }
-
-  if(day == 1 && time > ("15:40") && time < ("16:30")){
-      $("#English").show();
-     }else if(day == 2 && time > ("12:25") && time < ("13:10")){
-      $("#English").show();
-     }else if(day == 4 && time > ("10:55") && time < ("12:25")){
-      $("#English").show();
-     }else{
-    $("#English").hide();
-  }
-
-  if(day == 2 && time > ("11:40") && time < ("12:25")){
-      $("#CAT").show();
-     }else if(day == 5 && time > ("10:55") && time < ("12:25")){
-      $("#CAT").show();
-     }  else{
-    $("#CAT").hide();
-  }
-
-  if(day == 3 && time > ("11:40") && time < ("12:25")){
-      $("#BE").show();
-     }else if(day == 5 && time > ("13:05") && time < ("13:35")){
-      $("#BE").show();
-     }else if(day == 5 && time > ("14:10") && time < ("15:00")){
-      $("#BE").show();
-     }else{
-    $("#BE").hide();
-  }
-
-  if(day == 2){
-    if(time > ("15:40")){
-     if(time < ("16:30")){
-      $("#LO").show();
-     }else{
-       $("#LO").hide();
-     }
-    }
-  }else{
-    $("#LO").hide();
-  }
- 
-  if((day >= 0 && day <= 5) && (time > ("00:00") && time < ("08:55"))){
-      $("#NO").show();
-     }else if(day == 0 && time > ("10:45") && time < ("23:59")){
-      $("#NO").show();
-     }else if(day >= 1 && day <= 5 && time > ("10:40") && time < ("10:55")){
-      $("#NO").show();
-     }else if(day == 0 && time > ("11:40") && time < ("12:25")){
-      $("#NO").show();
-     }else if(day >= 2 && day <= 4 && time > ("13:10") && time < ("13:35")){
-      $("#NO").show();
-     }else if(day == 5 && time > ("15:00") && time < ("23:59")){
-      $("#NO").show();
-     }else if(day == 6 && time > ("0:00") && time < ("23:59")){
-      $("#NO").show();
-     }else if(day == 4 && time > ("15:40") && time < ("23:59")){
-      $("#NO").show();
-     }else if(day >= 1 && day <= 3 && time > ("16:30") && time < ("23:59")){
-      $("#NO").show();
-     }else{
-    $("#NO").hide();
-  }
-});
   </script>
   <style>
-    a.RDS:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.RPK:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.Afrikaans:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.Assembly:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.English:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.BE:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.CAT:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.Math:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.S:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.LS:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-a.LO:hover {
-  color: blue;
-  animation-duration: 500ms;
-  animation-name: wave;
-  animation-iteration-count: 1;
-  /*transform: scale(1.2);*/
-  animation-fill-mode: forwards;
-}
-/*#cal {
-  transform: scale(0.90);
-  margin-right: 25px;;
-}*/
-@keyframes wave {
-      0% {
-        transform: rotate(2.5deg);
-        font-weight: bold;
-      }
-      25% {
-        transform: rotate(-5deg);
-      }
-      50% {
-        transform: rotate(5deg);
-      }
-      100% {
-        transform: rotate(-2.5deg);
-        transform: scale(1.15);
-        font-weight: 750;
-      }
-    }
-    .container {
-      display: grid;
-      width: 100vw;
-      grid-template-columns: repeat(20, minmax(50px, 10vw));
-      grid-template-rows: repeat(13, 1fr);
-      padding: 20px;
-    }
-
-   @media screen and (max-width: 531px) {
-    .container { display: grid; width: 100vw;
-      grid-template-columns: repeat(20, minmax(10px, 10vw));
-      grid-template-rows: repeat(13, 1fr);
-      padding: 20px; }
-      .item {
-        font-size: 15px !important;
-      }
-      .item42 {
-        font-size: 13px !important;
-      }
-      .name {
-        font-size: 7px !important;
-      }
-      .clock {
-        display: none;
-      }
-}
-    .item {
-      grid-column: span 2;
-      grid-row: span 2;
-      border-width: 1px;
-      border-color: #000000;
-      font-weight: bold;
-    }
-    .item1 {
-      grid-column: 1/-1;
-      grid-row: span 1;
-      color:rgb(0, 0, 0);
-      background-color: transparent;
-      border-width: 0px;
-    }
-    .item2 {
-      align-self: center;
-      grid-column: span 4/13;
-      justify-items: center;
-    }
-    .item53 {
-      grid-column: span 1;
-    }
-    /*.item54 {
-      grid-column: span 1;
-    }*/
-    .RDS { 
-      color: #000000;
-      background-color: #0099ff;
-    }
-    .RPK {
-      color: #ffffff;
-      background-color: #002060;
-    }
-    .time {
-      color: #ffffff;
-      background-color: #000000;
-    }
-    .date {
-      color: #ffffff;
-      background-color: #000000;
-    }
-    .empty {
-      background-color: #ffff66;
-    }
-    .Math {
-      color: #000000;
-      background-color: #FF0066;
-    }
-    .CAT {
-      color: #000000;
-      background-color: #eeff00;
-    }
-    .Afrikaans {
-      color: #000000;
-      background-color: #0fd000;
-    }
-    .English {
-      color: #000000;
-      background-color: #ff0000;
-    }
-    .Assembly{
-      color: #000000;
-      background-color: #0070c0;
-    }
-    .S {
-      color: #000000;
-      background-color: #808080;
-    }
-    .LO {
-      color: #ffffff;
-      background-color: #800080;
-    }
-    .BE {
-      color: #ffffff;
-      background-color: #996600;
-    }
-    .LS {
-      color: #000000;
-      background-color: #99ffcc;
-    }
+    
   </style>
 </body>
+
+
+
+
