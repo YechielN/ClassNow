@@ -104,15 +104,9 @@
           $("#BE").hide();
         }
       
-        if(day == 2){
-          if(time > ("15:40")){
-           if(time < ("16:30")){
+        if(day == 2 && time > ("15:40") && time < ("16:30")){
             $("#LO").show();
            }else{
-             $("#LO").hide();
-           }
-          }
-        }else{
           $("#LO").hide();
         }
        
