@@ -55,20 +55,26 @@
            }else{
           $("#LS").hide();
         }
+
+        
       
         if(day == 1 && time > ("14:55") && time < ("15:40")){
             $("#Math").show();
+            console.log('2');
            }else if(day == 2 && time > ("14:10") && time < ("14:55")){
             $("#Math").show();
-          }else if(day == 3 || day == 4 || day == 5 && time > ("12:25") && time < ("13:10")){
+            console.log('1');
+          }else if((day == 3 || day == 4 || day == 5) && (time > ("12:25") && time < ("13:10"))){
             $("#Math").show();
+            console.log('3');
            }else{
           $("#Math").hide();
+          console.log('4');
         }
       
         if(day == 1 && time > ("14:10") && time < ("14:55")){
             $("#Afrikaans").show();
-           }else if(day == 3 || day == 5 && time > ("13:35") && time < ("14:10")){
+           }else if((day == 3 || day == 5) && (time > ("13:35") && time < ("14:10"))){
             $("#Afrikaans").show();
            }else if(day == 4 && time > ("14:55") && time < ("15:40")){
             $("#Afrikaans").show();
